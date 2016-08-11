@@ -46,14 +46,14 @@ gulp.task("min:css", function () {
 gulp.task("min", ["min:js", "min:css"]);
 
 var viewsShared = "./Views/Shared/";
-gulp.task("fixLayout:clean", function (cb) {
+gulp.task("mvcLayout:clean", function (cb) {
     rimraf(viewsShared + "_Layout.*", cb);
 });
 
-gulp.task("fixLayout:copy", function (cb) {
+gulp.task("mvcLayout:copy", function (cb) {
     gulp.src("./dist/index.html")
         .pipe(rename("_Layout.cshtml"))
         .pipe(gulp.dest(viewsShared));
 });
 
-gulp.task("fixLayout", ["fixLayout:clean", "fixLayout:copy"]);
+gulp.task("mvcLayout", ["mvcLayout:clean", "mvcLayout:copy"]);

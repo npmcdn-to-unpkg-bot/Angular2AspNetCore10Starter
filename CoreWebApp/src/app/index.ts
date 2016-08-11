@@ -1,2 +1,2 @@
 export * from './environment';
-export * from './ng2hw.component';
+export * from './site.component';
