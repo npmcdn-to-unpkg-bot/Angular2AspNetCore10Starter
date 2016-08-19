@@ -1,39 +1,18 @@
-import { Component, OnInit, OnDestroy, Input, ViewChild, AfterViewInit } from '@angular/core';
+import {Component, OnInit, OnDestroy, Input, ViewChild, AfterViewInit} from '@angular/core';
+import {MdSidenav} from '@angular2-material/sidenav/sidenav';
 
-import { MdToolbar } from '@angular2-material/toolbar';
-import { MdButton } from '@angular2-material/button';
-import { MD_SIDENAV_DIRECTIVES, MdSidenav } from '@angular2-material/sidenav';
-import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
-import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
-import { MdInput } from '@angular2-material/input';
-import { MdCheckbox } from '@angular2-material/checkbox';
-import { MdRadioButton, MdRadioGroup, MdUniqueSelectionDispatcher } from '@angular2-material/radio';
-import { MdIcon, MdIconRegistry } from '@angular2-material/icon';
-
-import { Puppy } from './shared/puppy';
-import { PuppiesService } from './shared/puppies.service';
-import { MATERIAL_BROWSER_PROVIDERS, Media } from './shared';
+import {Puppy} from './shared/puppy';
+import {PuppiesService} from './shared/puppies.service';
+import {Media} from './shared';
 
 @Component({
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: 'site-app',
-  templateUrl: 'site.component.html',
-  styleUrls: ['site.component.css'],
+  templateUrl: './app/site.component.html',
+  styleUrls: ['./app/site.component.css'],
   directives: [
-    MD_SIDENAV_DIRECTIVES,
-    MD_LIST_DIRECTIVES,
-    MD_CARD_DIRECTIVES,
-    MdToolbar,
-    MdButton,
-    MdInput,
-    MdCheckbox,
-    MdRadioGroup,
-    MdRadioButton,
-    MdIcon
   ],
   providers: [
-    MdUniqueSelectionDispatcher,
-    MdIconRegistry,
     PuppiesService,
     Media
   ]
@@ -58,14 +37,6 @@ export class SiteAppComponent
     }
   ];
   dogs: Object[] = [];
-  // [
-  //   {name: "Porter"},
-  //   {name: "Mal"},
-  //   {name: "Razzle"},
-  //   {name: "Koby"},
-  //   {name: "Molly"},
-  //   {name: "Husi"}
-  // ];
 
   @ViewChild(MdSidenav) private sidenav: MdSidenav;
 
@@ -90,5 +61,7 @@ export class SiteAppComponent
     });
   }
 
-  ngOnDestroy(): any { this._subscription.unsubscribe(); }
+  ngOnDestroy(): any { 
+    this._subscription.unsubscribe(); 
+  }
 }

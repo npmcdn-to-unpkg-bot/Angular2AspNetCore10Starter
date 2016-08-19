@@ -1,17 +1,12 @@
-import { bootstrap } from '@angular/platform-browser-dynamic';
-import { enableProdMode } from '@angular/core';
-import { HTTP_PROVIDERS } from '@angular/http';
-import {provideForms, disableDeprecatedForms} from "@angular/forms";
-
-import { SiteAppComponent, environment } from './app/';
-import { MATERIAL_BROWSER_PROVIDERS } from './app/shared';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {enableProdMode} from '@angular/core';
+import {environment} from './app/';
 
 if (environment.production) {
   enableProdMode();
 }
 
-bootstrap(SiteAppComponent, [
-    ...MATERIAL_BROWSER_PROVIDERS,
-    HTTP_PROVIDERS,
-    disableDeprecatedForms(), provideForms()
-]);
+import { SiteAppModule } from './app/site.module';
+import { browserDynamicPlatform } from '@angular/platform-browser-dynamic';
+
+browserDynamicPlatform().bootstrapModule(SiteAppModule);

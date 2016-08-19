@@ -14,14 +14,23 @@ const packages: any = {
 const materialPkgs:string[] = [
   'button',
   'card',
-  'checkbox',
   'core',
+  'checkbox',
+  'grid-list',
   'icon',
   'input',
   'list',
+  'menu',
+  'progress-bar',
+  'progress-circle',
   'radio',
   'sidenav',
-  'toolbar'
+  'slider',
+  'slide-toggle',
+  'button-toggle',
+  'tabs',
+  'toolbar',
+  'tooltip',
 ];
 
 materialPkgs.forEach((pkg) => {
@@ -42,11 +51,11 @@ const barrels: string[] = [
   '@angular/core',
   '@angular/common',
   '@angular/compiler',
+  '@angular/forms',
   '@angular/http',
   '@angular/router',
   '@angular/platform-browser',
   '@angular/platform-browser-dynamic',
-  '@angular/forms',
 
   // Thirdparty barrels.
   'rxjs',
