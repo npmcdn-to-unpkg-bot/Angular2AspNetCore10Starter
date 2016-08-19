@@ -1,6 +1,6 @@
-#ASP.NET Core 1.0, Angular 2 (rc-4) and Angular 2 Material Starter Project
+#ASP.NET Core 1.0, Angular 2 (rc-5) and Angular 2 Material (alpha.7-2) Starter Project
 
-This is a starter project that uses ASP.NET Core 1.0, Angular 2 (rc-4) (angular-cli) and Angular 2 Material to build the app that was shown at Google I/O. The original code is [here](https://github.com/kara/puppy-love).
+This is a starter project that uses ASP.NET Core 1.0, Angular 2 (rc-5) (angular-cli) and Angular 2 Material (alpha.7-2) to build the app that was shown at Google I/O. The original code is [here](https://github.com/kara/puppy-love).
 
 The only change that I made to the original puppy-love app was to add a Web API REST service to showcase the interaction with the Angular 2 app.
 
